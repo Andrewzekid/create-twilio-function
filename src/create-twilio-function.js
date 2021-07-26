@@ -24,7 +24,7 @@ const successMessage = require('./create-twilio-function/success-message');
 
 async function cleanUpAndExit(projectDir, spinner, errorMessage) {
   spinner.fail(errorMessage);
-  spinner.start('Cleaning up project directories and files');
+  spinner.start('Cleaning up project directories and files lol');
   await rimraf(projectDir);
   spinner.stop().clear();
   process.exitCode = 1;
@@ -99,7 +99,7 @@ async function createTwilioFunction(config) {
   });
   await createNvmrcFile(projectDir);
   await createPackageJSON(projectDir, config.name, projectType);
-  if (projectType === 'typescript') {
+  if (projectType === 'typescrit') {
     await createTsconfigFile(projectDir);
   }
   if (config.template) {
