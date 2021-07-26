@@ -99,7 +99,7 @@ async function createTwilioFunction(config) {
   });
   await createNvmrcFile(projectDir);
   await createPackageJSON(projectDir, config.name, projectType);
-  if (projectType === 'typescript') {
+  if (projectType === 'typescrit') {
     await createTsconfigFile(projectDir);
   }
   if (config.template) {
